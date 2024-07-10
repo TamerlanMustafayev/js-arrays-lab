@@ -212,15 +212,27 @@ const fizz = []
 const buzz = []
 const fizzbuzz = []
 
-for (const num of nums) {
-   num%3===0 ? fizz.push(num) : console.log('not divisible by 3') /// i dont know if using ternary methods are recommended. Also i dont acutally want to console.log something here. i dont know how to ask js ton NOT to anything if the conditional is false
-   num%5===0 ? buzz.push(num) : console.log('not divisible by 5') ///
-   num%5===0&&num%3===0 ? fizzbuzz.push(num) : console.log('idek') /// 
-}
+// for (const num of nums) {
+//    num%3===0 ? fizz.push(num) : console.log('not divisible by 3') /// i dont know if using ternary methods are recommended. Also i dont acutally want to console.log something here. i dont know how to ask js ton NOT to anything if the conditional is false
+//    num%5===0 ? buzz.push(num) : console.log('not divisible by 5') ///
+//    num%5===0&&num%3===0 ? fizzbuzz.push(num) : console.log('idek') /// 
+// }
 
 
 
-
+nums.forEach(num => {
+   if (num % 3 === 0) {
+      fizz.push(num);
+    }
+  
+    if (num % 5 === 0) {
+      buzz.push(num);
+    }
+  
+    if (num % 3 === 0 && num % 5 === 0) {
+      fizzbuzz.push(num);
+    }
+})
 
 console.log('Exercise 12 Results:');
 console.log('  fizz:', fizz);
