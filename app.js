@@ -87,7 +87,8 @@ Exercise 6: Replace elements
 
 Complete Exercise 6 in the space below:
 */
-foods.splice(foods.indexOf('pizza'),1,'sushi', 'cupcake')
+foods.splice(foods.indexOf('pizza'), 1, 'sushi', 'cupcake')
+
 
 
 console.log('Exercise 6 result:', foods);
@@ -284,3 +285,44 @@ const num = numArrays[2][1]
 
 console.log('Exercise 14 result:', num);
 
+
+
+/*
+Exercise 15: Nested array sum
+
+1) Use nested loops or `forEach()` methods to sum up all numbers within 
+   `numArrays` nested arrays.
+   
+2) Assign the sum to a variable called `total`.
+
+Hint: Be sure to declare and initialize the total variable before the iterations.
+
+Complete Exercise 15 in the space below:
+*/
+
+let total = 0
+
+for (const nestedArr of numArrays) {
+   for (const nestedArrEL of nestedArr) {
+      total = total +nestedArrEL
+   }
+}
+
+
+
+
+// THE CODE BELOW was my initial try that i really trusted but unfortunately it did not work.
+
+// for (let i = 0; i < numArrays.length; i++ ) {
+//    numArrays.forEach(nestedArr => {
+//       for (let n; n < nestedArr.length; n++) {
+//          total = total + nestedArr[n]
+//          console.log(total, 'is')
+//       }
+//    })
+// }
+
+
+
+
+console.log('Exercise 15 result:\n', total);
